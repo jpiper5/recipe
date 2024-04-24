@@ -47,6 +47,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+* {
+    transition: 0.5s;
+}
 html {
     background-color: rgba(122, 191, 191, .5);
     box-sizing: border-box;
@@ -98,12 +101,9 @@ menu a {
    align-items: center;
    color: #EB5428;
    padding: 5px;
-   transition: background-color 1s;
-   transition: color .7s;
 }
 menu svg {
     display: block;
-    transition: stroke .5s;
 }
 h1, h2, h3 {
     font-family: "Bebas Neue", sans-serif;
@@ -162,7 +162,6 @@ aside h2 {
     grid-template-rows: .75fr .75fr .5fr .5fr;
     padding: 15px 0 15px 10px;
     height: 120px;
-    transition: background-color 1s;
 }
 .side img {
     grid-row: span 4;
@@ -379,10 +378,6 @@ svg:hover, a:hover {
 menu a:hover {
     background-color: rgba(235, 84, 40, .7);
     border-radius: 5px; 
-    color: #7ABFBF;
- }
- menu a:hover svg {
-     stroke: #7ABFBF;
  }
 @media screen and (min-width:768px) {
     body {
@@ -399,15 +394,11 @@ menu a:hover {
         overflow: visible;
         display: flex;
         flex-direction: row;
-        max-height: 50%;
-        height: 150px;
-        margin-top: 10px;
-        margin-bottom: 4px;
         padding: 5px;
+        margin-bottom: 40px;
     }
     nav li {
         padding: 10px 5px 5px;
-        transition: background-color 1s;
     }
     nav li a {
         display: flex;
@@ -439,17 +430,16 @@ menu a:hover {
        right: 0;
        height: fit-content;
        padding: 0 10px 10px;
-       transition: background-color 1s;
     }
     nav label {
         display: none;
     }
     #search {
         position: fixed;
-        top: 10px;
-        right: 150px;
         width: 270px;
         z-index: 5;
+        margin-left: 220px;
+        margin-top: -90px;
     }
     header {
         height: 90px;
@@ -582,6 +572,9 @@ menu a:hover {
         width: 94px;
         justify-content: flex-start;
         border: 2px solid #EB5428;
+    }
+    #search {
+        margin: 0;
     }
     #info {
         display: grid;
